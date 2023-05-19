@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/6402ca9563.js" crossorigin="anonymous"></script>
+    
+    <title>Fitness App</title>
+
+</head>
+<body>
+  
+  <header>
+    
+      <section class="links">
+        <ul>
+          <li><a href="/profile">Home</a></li>
+          <li><a href="/workout">Free Workouts</a></li>
+          <li><a href="/hydration-tracker">Hydration Tracker</a></li>
+        </ul>
+      </section>
+
+  </header>
+
+  <main>
+    <section class="topSection">
+      <div class="intro">
+        <h1>a gallon of water a day keeps u healthy</h1></div>
+      <div class="text2">
+        <p>Drinking a gallon of water a day offers several benefits. It improves physical performance by enhancing muscle function and joint lubrication, boosts cognitive function by preventing dehydration-related cognitive impairments, and promotes healthier skin by maintaining elasticity, reducing dryness, and flushing out toxins.</p>
+      </div>
+    </section>
+  </main>
+               
+  <h2>Add estimated water intake</h2>
+  <% if (user && user.local && user.local.email) { %>
+<form action="/entries" method="POST">
+  <input type="text" placeholder="date" name="date">
+  <input type="text" placeholder="water consumed (oz)" name="wtr">
+  <button type="submit">Submit</button>
+</form>
+<% } %>
+
+<div class="col-sm-6">
+  <h3>Hydration Log</h3>
+  <ul class="entries">
+    <% for(var i=0; i<entries.length; i++) { %>
+      <li class="entry">
+        <span><%= entries[i].date %></span>
+        <span><%= entries[i].wtr %></span>
+        <button class="delete-entry" data-id="<%= i %>">Delete</button>
+      </li>
+    <% } %>
+  </ul>
+</div>
+
+
+
+
+
+<script src="main.js"></script>  
+</body>
+</html>

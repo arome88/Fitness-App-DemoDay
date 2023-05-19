@@ -1,7 +1,187 @@
-body{
-  padding-top:80px;
-  word-wrap:break-word;
+body {
+  padding-top: 80px;
+  word-wrap: break-word;
+  background-color: #f2f9fd;
 }
-img{
+
+img {
   height: 200px;
 }
+
+
+
+
+/* workouts */
+.links {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+header {
+  background-color: #337ab7;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Style the main sections */
+.topSection {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.workoutIntro h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.bottomSection {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.workoutContainer {
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Style the buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btnRow {
+  margin-top: 20px;
+}
+
+/* Style the workout sections */
+.rowBack {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sectionOneName,
+.sectionTwoName,
+.sectionThreeName,
+.sectionFourName,
+.sectionFiveName,
+.sectionSixName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.workoutSections {
+  list-style: none;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.topSection {
+  border: 1px solid #007bff;
+}
+
+.btn {
+  background-color: #007bff;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.sectionOneName,
+.sectionTwoName,
+.sectionThreeName,
+.sectionFourName,
+.sectionFiveName,
+.sectionSixName {
+  color: #007bff;
+}
+
+.sectionOneInstructions,
+.sectionTwoInstructions,
+.sectionThreeInstructions,
+.sectionFourInstructions,
+.sectionFiveInstructions,
+.sectionSixInstructions {
+  counter-reset: sectionCounter;
+  padding-left: 0;
+}
+
+.sectionOneInstructions li,
+.sectionTwoInstructions li,
+.sectionThreeInstructions li,
+.sectionFourInstructions li,
+.sectionFiveInstructions li,
+.sectionSixInstructions li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.sectionOneInstructions li:before,
+.sectionTwoInstructions li:before,
+.sectionThreeInstructions li:before,
+.sectionFourInstructions li:before,
+.sectionFiveInstructions li:before,
+.sectionSixInstructions li:before {
+  content: counter(sectionCounter);
+  counter-increment: sectionCounter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.sectionOneInstructions li span,
+.sectionTwoInstructions li span,
+.sectionThreeInstructions li span,
+.sectionFourInstructions li span,
+.sectionFiveInstructions li span,
+.sectionSixInstructions li span {
+  display: inline-block;
+}
+
+.sectionOneInstructions li span:before,
+.sectionTwoInstructions li span:before,
+.sectionThreeInstructions li span:before,
+.sectionFourInstructions li span:before,
+.sectionFiveInstructions li span:before,
+.sectionSixInstructions li span:before {
+  content: ".";
+  margin-right: 5px;
+}
+
+
+
+
+
